@@ -2,11 +2,11 @@ rm(list=ls())
 
 ptm <- proc.time()
 
-setwd('D:/Schooling/Higher Education/!papers&research/SHIM_New')
+#setwd('D:/Schooling/Higher Education/!Research/SHIM_New')
 library(glmnet)
-source('selection_interaction_w-beta_ori.r')
-source('shim.r')
-source('selection_interaction_stepwise.r')
+source('VSSH/R-codes-use/selection_interaction_lasso.r')
+source('VSSH/R-codes-use/shim.r')
+source('VSSH/R-codes-use/selection_interaction_stepwise.r')
 
 ## x2[,1]:x1*x2, x2[,2]:x1*x3, x2[,3]:x1*x4
 ## x2[,10:11]: x2*x3, x2*x4
@@ -40,8 +40,6 @@ coef.mat.step = matrix(0,nrow=sim.num,ncol=q*(q+1)/2)
 info.step = matrix(,sim.num,1)
 coef.mat.ourstep = matrix(,nrow=sim.num,ncol=q*(q+1)/2)
 info.ourstep = matrix(,sim.num,1)
-coef.mat.shim = matrix(,nrow=sim.num,ncol=q*(q+1)/2)
-info.shim = matrix(,sim.num,1)
 
 for (sim in 1:sim.num) {
 

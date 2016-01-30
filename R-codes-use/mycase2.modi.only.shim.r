@@ -2,8 +2,8 @@ rm(list=ls())
 
 ptm <- proc.time()
 
-setwd('D:/Schooling/Higher Education/!papers&research/SHIM_New')
-source('shim.r')
+#setwd('D:/Schooling/Higher Education/!Research/SHIM_New')
+source('VSSH/R-codes-use/shim.r')
 
 ## x2[,1]:x1*x2, x2[,2]:x1*x3, x2[,3]:x1*x4
 ## x2[,10:11]: x2*x3, x2*x4
