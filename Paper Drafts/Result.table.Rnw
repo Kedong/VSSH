@@ -1,0 +1,66 @@
+\documentclass[11pt, oneside]{article}  
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}   
+\usepackage{graphicx}	
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage[tableposition=top]{caption}
+\usepackage{ifthen}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{verbatim}
+%\usepackage{mdframed}
+\usepackage{color}
+\definecolor{gray}{rgb}{.9,.9,.9}
+\usepackage{url}
+\usepackage{verbdef}% http://ctan.org/pkg/verbdef
+\verbdef{\vtext}{}
+
+\begin{document}
+
+<<include=FALSE>>=
+library(knitr)
+opts_chunk$set(
+concordance=TRUE
+)
+@
+
+\title{Result Table}
+\author{Kedong Chen}
+\maketitle
+
+%\clearpage
+
+
+%
+% Use the following environment.
+% Don't forget to label each problem;
+% the label is needed for the solutions' environment
+
+Creating, importing, and manipulating
+
+ \renewcommand{\labelenumi}{(\alph{enumi})}
+ \renewcommand{\labelenumii}{\roman{enumii}.}
+
+
+\begin{center}
+\renewcommand{\tabcolsep}{.25cm}
+%\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+My Name & $v_2$ & $v_3$ & $v_4$ & \dots \\
+\hline
+$v_2$ 	&		&		&	& \dots \\
+\hline 
+$v_3$ 	&		&		&	& \dots \\
+\hline
+$v_4$ 	&		&		&	& \dots \\
+\hline
+\vdots 	&\vdots	&\vdots	&\vdots & $\ddots$ \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\end{document}
+
