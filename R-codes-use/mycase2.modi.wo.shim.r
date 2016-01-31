@@ -4,9 +4,9 @@ ptm <- proc.time()
 
 #setwd('D:/Schooling/Higher Education/!Research/SHIM_New')
 library(glmnet)
-source('VSSH/R-codes-use/selection_interaction_lasso.r')
-source('VSSH/R-codes-use/shim.r')
-source('VSSH/R-codes-use/selection_interaction_stepwise.r')
+source('R-codes-use/selection_interaction_lasso.r')
+source('R-codes-use/shim.r')
+source('R-codes-use/selection_interaction_stepwise.r')
 
 ## x2[,1]:x1*x2, x2[,2]:x1*x3, x2[,3]:x1*x4
 ## x2[,10:11]: x2*x3, x2*x4
@@ -29,7 +29,7 @@ beta1 = beta1 * main.magnitude
 beta2 = beta2 * int.magnitude
 beta = c(beta1, beta2)
 if (constcoef!=1) {for (i in 1:length(beta)) beta[i]=beta[i]*(runif(1)+0.5)}
-sigma = 8
+sigma = 20
 
 sim.num = 100
 coef.mat.our = matrix(,nrow=sim.num,ncol=q*(q+1)/2)

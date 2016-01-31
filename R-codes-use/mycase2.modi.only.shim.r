@@ -3,7 +3,7 @@ rm(list=ls())
 ptm <- proc.time()
 
 #setwd('D:/Schooling/Higher Education/!Research/SHIM_New')
-source('VSSH/R-codes-use/shim.r')
+source('R-codes-use/shim.r')
 
 ## x2[,1]:x1*x2, x2[,2]:x1*x3, x2[,3]:x1*x4
 ## x2[,10:11]: x2*x3, x2*x4
@@ -16,8 +16,8 @@ numsig = 4  # number of significant main effects
 numintzero = 0  # number of interactions that were set as 0
 numnonusemain = 0  # number of mains that dont have interactions
 constcoef = 1  # if the coefficients are constant
-main.magnitude = 0.1
-int.magnitude = 10
+main.magnitude = 1
+int.magnitude = 1
 
 beta1 = c(rep(1,numsig),rep(0,q-numsig))
 beta2 = combn(c(rep(1,numsig-numnonusemain),rep(0,q-numsig+numnonusemain)),2,prod)
@@ -26,9 +26,9 @@ beta1 = beta1 * main.magnitude
 beta2 = beta2 * int.magnitude
 beta = c(beta1, beta2)
 if (constcoef!=1) {for (i in 1:length(beta)) beta[i]=beta[i]*(runif(1)+0.5)}
-sigma = 12
+sigma = 20
 
-sim.num = 10
+sim.num = 20
 coef.mat.shim = matrix(,nrow=sim.num,ncol=q*(q+1)/2)
 info.shim = matrix(,sim.num,1)
 
@@ -71,7 +71,7 @@ for (sim in 1:sim.num) {
 	## Non-adaptive SHIM ##
 	## Transform lambda1&2 to lambda & s ##
 	## phi here is the coefs with intercept ##
-	lambda.list = exp(seq(0,10,0.5))
+	lambda.list = exp(seq(5,10,0.5))
 	lambda.list.length = length(lambda.list)
 	msevec.shim.1 = 0
 	v.list = 0
