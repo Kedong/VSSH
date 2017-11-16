@@ -1,0 +1,5 @@
+"","mean","s.e."
+"se.vanilla_lasso",1,0
+"se.plain_lasso",0.928,0.011
+"sp.vanilla_lasso",0.645,0.013
+"sp.plain_lasso",0.735,0.014

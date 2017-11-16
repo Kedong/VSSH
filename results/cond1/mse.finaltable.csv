@@ -1,0 +1,6 @@
+"","mean","s.e."
+"vanilla_lasso",11.1,0.09
+"plain_lasso",11.21,0.1
+"vanilla_stepwise",12.33,0.14
+"plain_stepwise",12.4,0.16
+"SHIM",10.04,0.05

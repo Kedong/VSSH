@@ -1,0 +1,11 @@
+"","mean","s.e."
+"se.vanilla_lasso",0.81,0.019
+"se.plain_lasso",0.816,0.017
+"se.vanilla_stepwise",0.73,0.014
+"se.plain_stepwise",0.733,0.014
+"se.SHIM",NA,NA
+"sp.vanilla_lasso",0.637,0.017
+"sp.plain_lasso",0.704,0.017
+"sp.vanilla_stepwise",0.722,0.009
+"sp.plain_stepwise",0.804,0.009
+"sp.SHIM",NA,NA
